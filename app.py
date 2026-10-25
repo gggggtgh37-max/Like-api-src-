@@ -384,8 +384,8 @@ def handle_requests():
         "Note": (f"visit token used for profile check; "
                  f"{'random' if use_random else 'rotating'} batch "
                  f"of {len(batch)} tokens for like send."),
-        "Owner": "@DG_DRIFT",
-        "Tg": "DGDRIFT",
+        "Owner": "@TUFANFF95",
+        "Tg": "TGCHATS5",
     })
 
 
@@ -394,7 +394,7 @@ def handle_requests():
 def reset_state():
     """Reload everything in memory. Token files are NOT touched."""
     secret = request.args.get("secret", "")
-    if secret != "drift":
+    if secret != "TUFAN77":
         return jsonify({"error": "Unauthorized. Invalid secret."}), 401
 
     with batch_indices_lock:
@@ -412,8 +412,8 @@ def reset_state():
         "status": "ok",
         "message": "All state reloaded. Token files untouched.",
         "regions": reloaded,
-        "Owner": "@DG_DRIFT",
-        "Tg": "DGDRIFT",
+        "Owner": "@TUFANFF95",
+        "Tg": "TGCHATS5",
     })
 
 
