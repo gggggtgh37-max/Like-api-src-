@@ -18,7 +18,7 @@ import os
 TOKEN_BATCH_SIZE = 189
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-API_KEY = os.environ.get("API_KEY", "drift")
+API_KEY = os.environ.get("API_KEY", "TUFAN77")
 
 # Region -> Endpoint
 REGION_URL = {
