@@ -293,7 +293,7 @@ app = Flask(__name__)
 
 @app.route('/like', methods=['GET'])
 def handle_requests():
-    api_key = request.headers.get("X-API-KEY") or request.args.get("api_key")
+    api_key = request.headers.get("X-API-KEY") or request.args.get("key")
     if api_key != API_KEY:
         return jsonify({"error": "Unauthorized. Invalid API key."}), 401
 
@@ -394,7 +394,7 @@ def handle_requests():
 def reset_state():
     """Reload everything in memory. Token files are NOT touched."""
     secret = request.args.get("secret", "")
-    if secret != "TUFAN77":
+    if secret != "drift":
         return jsonify({"error": "Unauthorized. Invalid secret."}), 401
 
     with batch_indices_lock:
